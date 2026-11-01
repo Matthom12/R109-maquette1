@@ -75,3 +75,54 @@ p{
     padding-bottom: 1%;
     font-family: Montserrat;
 }
+
+
+.g {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    width: 90%;
+    max-width: 815px;
+    margin: 0 auto;
+}
+
+.g img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+.g img:nth-child(n + 10) {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .g {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .g img:nth-child(n + 10) {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 7px;
+        width: 100%;
+        margin: 0;
+        padding: 10px 0;
+        font-size: 11px;
+    }
+
+    #navbar a {
+        white-space: nowrap;
+    }
+
+    #test {
+        padding: 3px 4px;
+    }
+}
